@@ -14,6 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Petition::factory(50)->create();
+        // Petition::factory(50)->create();
     }
 }
