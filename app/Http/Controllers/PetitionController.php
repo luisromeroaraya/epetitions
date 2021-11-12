@@ -4,17 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Models\Petition;
 use Illuminate\Http\Request;
+use App\Http\Resources\PetitionResource;
+use App\Http\Resources\PetitionCollection;
 
 class PetitionController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
-        //
+        return new PetitionCollection(Petition::all());
+        // return PetitionResource::collection(Petition::all()); 
+        // this doesnt returns meta data at the end like version or author
     }
 
     /**
