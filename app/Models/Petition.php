@@ -11,8 +11,8 @@ class Petition extends Model
 
     protected $fillable = [
         'title',
-        'description',
         'category',
+        'description',
         'author',
         'signees',
     ];

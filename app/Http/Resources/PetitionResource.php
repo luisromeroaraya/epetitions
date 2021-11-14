@@ -17,8 +17,8 @@ class PetitionResource extends JsonResource
         return [
             'id' => $this->id,
             'title' => ucwords($this->title),
-            'description' => $this->description,
             'category' => $this->category,
+            'description' => $this->description,
             'author' => $this->author,
             'signees' => $this->signees,
         ];
