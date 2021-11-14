@@ -29,6 +29,6 @@ class AuthorController extends Controller
      */
     public function show(Author $author)
     {
-        return new AuthorResource($author);
+        return response()->json(new AuthorResource($author), Response::HTTP_OK);
     }
 }
